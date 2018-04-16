@@ -1,0 +1,11 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "prettier"
+  ],
+  "rules": {
+    "no-magic-numbers": 0
+  }
+}

@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: "nodeapi"
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    ports:
+          - 27017:27017
