@@ -8,17 +8,14 @@ module.exports = {
   scripts: {
     build: {
       description: "Building in production environment.",
-      default: series.nps("clean", "build.build", "copy"),
-      build: "babel src -d dist --ignore src/public"
+      default: series.nps("clean", "build.build"),
+      build: "babel src -d dist"
     },
     clean: {
       description: "Clean dist folder.",
       default: rimraf("dist")
     },
-    copy: {
-      description: "Copying Views",
-      default: "cp -r ./src/views/ ./src/public/ ./dist/"
-    },
+
     default: {
       description: "Start project with pm2 on production.",
       script: `${crossEnv(

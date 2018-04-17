@@ -6,6 +6,7 @@ define({ "api": [
     "description": "<p>Create a user</p>",
     "name": "createUser",
     "group": "User",
+    "version": "1.0.0",
     "parameter": {
       "fields": {
         "Body": [
@@ -83,7 +84,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "src/controllers/user.controller.js",
     "groupTitle": "User"
   },
@@ -94,6 +94,7 @@ define({ "api": [
     "description": "<p>Login a user</p>",
     "name": "loginUser",
     "group": "User",
+    "version": "1.0.0",
     "parameter": {
       "fields": {
         "Body": [
@@ -157,7 +158,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "src/controllers/authentication.controller.js",
     "groupTitle": "User"
   }

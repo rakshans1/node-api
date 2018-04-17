@@ -13,6 +13,6 @@ var app = express();
 middlewaresConfig(app);
 app.use('/api', ApiRoutes);
 
-// app.use();
+app.use(express.static(path.join(__dirname, '../doc')));
 
 module.exports = app;

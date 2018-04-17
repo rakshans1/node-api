@@ -18,7 +18,7 @@ const testConfig = {
 
 const prodConfig = {
   JWT_SECRET: process.env.JWT_SECRET_PROD,
-  MONGO_URL: process.env.MONGO_URL_PROD
+  MONGO_URL: process.env.MONGODB_URI
 };
 
 const defaultConfig = {

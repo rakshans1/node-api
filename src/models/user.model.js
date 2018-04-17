@@ -102,7 +102,7 @@ UserSchema.methods = {
    */
   toAuthJSON() {
     return {
-      id: this._id,
+      _id: this._id,
       token: `${this.createToken()}`,
     };
   },

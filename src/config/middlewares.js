@@ -13,7 +13,7 @@ import path from "path";
 import mongoose from "mongoose";
 import mongoSanitize from 'express-mongo-sanitize';
 import cors from 'cors';
-// import expressStatusMonitor from 'express-status-monitor';
+import expressStatusMonitor from 'express-status-monitor';
 
 import constants from "./constants";
 import winstonInstance from "./winston";
@@ -29,7 +29,7 @@ export default app => {
   app.use(passport.initialize());
   app.use(helmet());
   app.use(cors());
-  // app.use(expressStatusMonitor());
+  app.use(expressStatusMonitor());
   app.use(methodOverride());
   app.use(mongoSanitize());
 

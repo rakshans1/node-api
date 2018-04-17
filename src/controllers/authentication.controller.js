@@ -19,6 +19,7 @@ export const validation = {
  * @apiDescription Login a user
  * @apiName loginUser
  * @apiGroup User
+ * @apiVersion 1.0.0
  *
  * @apiParam (Body) {String} email User email.
  * @apiParam (Body) {String} password User password.
@@ -44,7 +45,5 @@ export const validation = {
  *  }
  */
 export async function login(req, res, next) {
-  res.status(HTTPStatus.OK).json(req.user.toAuthJSON());
-
-  return next();
+  return res.status(HTTPStatus.OK).json(req.user.toAuthJSON());
 }

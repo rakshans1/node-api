@@ -39,6 +39,7 @@ export const validation = {
  * @apiDescription Create a user
  * @apiName createUser
  * @apiGroup User
+ * @apiVersion 1.0.0
  *
  * @apiParam (Body) {String} name User name.
  * @apiParam (Body) {String} email User email.
@@ -70,17 +71,6 @@ export async function create(req, res, next) {
   try {
     const user = await User.create(body);
     return res.status(HTTPStatus.CREATED).json(user.toAuthJSON());
-  } catch (e) {
-    e.status = HTTPStatus.BAD_REQUEST;
-    return next(e);
-  }
-}
-
-
-export async function list(req, res, next) {
-  try {
-    const users = await User.find({});
-    return res.status(HTTPStatus.OK).json(users);
   } catch (e) {
     e.status = HTTPStatus.BAD_REQUEST;
     return next(e);
