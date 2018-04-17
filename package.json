@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm run build",
-    "start": "NODE_ENV=production pm2 start dist/bin/www.js --name node-api",
+    "start": "node dist/bin/www.js",
     "serve:docker": "docker-compose -f docker-compose.dev.yml up",
     "dev": "nps dev.start",
     "dev:debug": "nps dev.debug",
