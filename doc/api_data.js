@@ -88,6 +88,53 @@ define({ "api": [
     "groupTitle": "User"
   },
   {
+    "type": "get",
+    "url": "/users/list",
+    "title": "List all users",
+    "description": "<p>List all users</p>",
+    "name": "listUsers",
+    "group": "User",
+    "version": "1.0.0",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Status of the Request.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Array",
+            "optional": false,
+            "field": "users",
+            "description": "<p>Users list.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\nHTTP/1.1 200 OK\n\n[\n {\n   \"_id\":\"5ad88c4826eb0300450c2d3e\",\n   \"email\":\"shetty.raxx555@gmail.com\",\n   \"name\":\"Rakshan Shetty\",\n   \"createdAt\":\"2018-04-19T12:32:08.661Z\"\n   \"updatedAt\":\"2018-04-19T12:32:08.661Z\"\n },\n ...\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error",
+          "content": "HTTP/1.1 400 Bad Request\n{\"message\":\"Not Found!\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/controllers/user.controller.js",
+    "groupTitle": "User"
+  },
+  {
     "type": "post",
     "url": "/users/login",
     "title": "Login a user",

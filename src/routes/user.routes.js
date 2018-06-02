@@ -22,5 +22,9 @@ routes.post(
   authLocal,
   AuthenticationController.login
 );
+routes.get(
+  "/list",
+  UserController.list
+);
 
 export default routes;

@@ -1,9 +1,9 @@
 define({
-  "name": "NodeJS-API-STARTER",
+  "name": "NodeJS-API",
   "version": "1.0.0",
-  "description": "Api docs of NodeJS-API-Boilerplate",
-  "title": "NodeJS-API-STARTER",
-  "url": "http://localhost:3000/api",
+  "description": "Api docs of NodeJS-API",
+  "title": "NodeJS-API",
+  "url": "https://raxx-api.herokuapp.com/api",
   "template": {
     "forceLanguage": "en"
   },
@@ -12,7 +12,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2018-04-17T10:58:47.218Z",
+    "time": "2018-06-02T11:12:54.014Z",
     "url": "http://apidocjs.com",
     "version": "0.17.6"
   }

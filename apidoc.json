@@ -1,9 +1,9 @@
 {
-  "name": "NodeJS-API-STARTER",
+  "name": "NodeJS-API",
   "version": "1.0.0",
-  "description": "Api docs of NodeJS-API-Boilerplate",
-  "title": "NodeJS-API-STARTER",
-  "url": "http://localhost:3000/api",
+  "description": "Api docs of NodeJS-API",
+  "title": "NodeJS-API",
+  "url": "https://raxx-api.herokuapp.com/api",
   "template": {
     "forceLanguage": "en"
   }

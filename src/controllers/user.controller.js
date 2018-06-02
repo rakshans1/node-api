@@ -76,3 +76,43 @@ export async function create(req, res, next) {
     return next(e);
   }
 }
+
+/**
+ * @api {get} /users/list List all users
+ * @apiDescription List all users
+ * @apiName listUsers
+ * @apiGroup User
+ * @apiVersion 1.0.0
+ *
+ *
+ * @apiSuccess {Number} status Status of the Request.
+ * @apiSuccess {Array} users Users list.
+ *
+ * @apiSuccessExample Success-Response:
+ *
+ * HTTP/1.1 200 OK
+ *
+ * [
+ *  {
+ *    "_id":"5ad88c4826eb0300450c2d3e",
+ *    "email":"shetty.raxx555@gmail.com",
+ *    "name":"Rakshan Shetty",
+ *    "createdAt":"2018-04-19T12:32:08.661Z"
+ *    "updatedAt":"2018-04-19T12:32:08.661Z"
+ *  },
+ *  ...
+ * ]
+ *
+ * @apiErrorExample {json} Error
+ *  HTTP/1.1 400 Bad Request
+ *  {"message":"Not Found!"}
+ */
+export async function list(req, res, next) {
+  try {
+    const users = await User.find({}, '_id name email createdAt updatedAt').lean();
+    return res.status(HTTPStatus.CREATED).json(users);
+  } catch (e) {
+    e.status = HTTPStatus.BAD_REQUEST;
+    return next(e);
+  }
+}
